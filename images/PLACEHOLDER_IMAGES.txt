@@ -1,0 +1,34 @@
+PLACEHOLDER IMAGES - INSTRUCTIONS
+
+To complete your portfolio website, you need to add the following image files to this folder:
+
+1. profile.jpg (300x300px recommended)
+   - Your professional profile photo
+   - Will be displayed as a circular image in the hero section
+   - Use a high-quality, well-lit photo with a clean background
+
+2. project1.jpg (400x250px recommended)
+   - Screenshot or mockup of your first project
+   - Should represent your "Web Application Project"
+
+3. project2.jpg (400x250px recommended)
+   - Screenshot or mockup of your second project  
+   - Should represent your "Mobile App Concept"
+
+4. project3.jpg (400x250px recommended)
+   - Screenshot or mockup of your third project
+   - Should represent your "Algorithm Visualization"
+
+NOTES:
+- You can use any image format: .jpg, .jpeg, .png, .webp
+- Make sure the file names match exactly what's referenced in the HTML
+- For best results, optimize images for web (compress them to reduce file size)
+- You can create mockups using tools like Canva, Figma, or even simple screenshots
+
+TIPS FOR GOOD PROJECT IMAGES:
+- Show the actual interface of your applications
+- If you don't have completed projects yet, create mockups or wireframes
+- Use consistent styling across all project images
+- Ensure images are clear and showcase the key features
+
+Once you add these images, your portfolio will be complete and ready to use!

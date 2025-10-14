@@ -1,0 +1,103 @@
+AONONTO JAHAN JUNNURAIN - PORTFOLIO SETUP GUIDE
+=================================================
+
+Your portfolio website has been created successfully! Here's how to get it running:
+
+🚀 IMMEDIATE NEXT STEPS:
+
+1. ADD YOUR IMAGES:
+   - Add your profile photo as "images/profile.jpg"
+   - Add project screenshots as "images/project1.jpg", "images/project2.jpg", "images/project3.jpg"
+   - Check "images/PLACEHOLDER_IMAGES.txt" for detailed requirements
+
+2. CUSTOMIZE YOUR CONTENT:
+   - Open "index.html" in a text editor
+   - Replace placeholder information with your real details:
+     * Email address (currently: aononto@example.com)
+     * Phone number (currently: +880 123 456 7890)
+     * Social media links
+     * Project descriptions and links
+     * Skills and technologies
+
+3. TEST YOUR WEBSITE:
+   - Double-click "index.html" to open it in your browser
+   - Check all sections work correctly
+   - Test on mobile by resizing the browser window
+
+📁 FILES IN YOUR PORTFOLIO:
+
+- index.html       → Main website file (open this in browser)
+- css/style.css    → All the styling and design
+- js/script.js     → Interactive features and animations
+- images/          → Folder for your photos and project images
+- README.md        → Detailed documentation and instructions
+- SETUP_GUIDE.txt  → This quick guide
+
+💡 FEATURES INCLUDED:
+
+✅ Responsive design (works on all devices)
+✅ Smooth scrolling navigation
+✅ Contact form with validation
+✅ Project showcase section
+✅ Skills and education timeline
+✅ Professional animations and effects
+✅ Mobile-friendly hamburger menu
+
+🌐 TO PUBLISH ONLINE:
+
+Option 1 - GitHub Pages (Free):
+- Create a GitHub account
+- Upload all files to a new repository
+- Enable GitHub Pages in settings
+
+Option 2 - Netlify (Free):
+- Go to netlify.com
+- Drag and drop your portfolio folder
+- Get instant website URL
+
+Option 3 - Traditional Hosting:
+- Upload files to your web host via FTP
+- Make sure index.html is in the root directory
+
+📞 CUSTOMIZATION TIPS:
+
+- Colors can be changed in css/style.css
+- To add more projects, copy existing project cards in HTML
+- Skills can be updated in the skills section
+- All text content is in index.html
+
+🔧 TECHNICAL DETAILS:
+
+- Built with HTML5, CSS3, and JavaScript
+- Uses Font Awesome for icons
+- Google Fonts (Poppins) for typography
+- Fully responsive design
+- Cross-browser compatible
+
+📖 FOR DETAILED HELP:
+
+Check README.md for comprehensive documentation including:
+- Step-by-step customization guide
+- Troubleshooting tips
+- Advanced features explanation
+- Deployment instructions
+
+🎯 YOUR PORTFOLIO INCLUDES:
+
+1. Hero section with your photo and introduction
+2. About section with personal information
+3. Education timeline (currently shows IUBAT)
+4. Skills organized by category
+5. Projects showcase with descriptions
+6. Contact form and social links
+7. Professional footer
+
+READY TO GO! 🚀
+
+Your portfolio is now ready to customize and deploy. Start by adding your images and updating the content in index.html.
+
+Good luck with your portfolio!
+
+---
+Created for Aononto Jahan Junnurain
+CSE Student at IUBAT
