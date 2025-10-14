@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-This is a static portfolio website for Aononto Jahan Junnurain, built with vanilla HTML5, CSS3, and JavaScript. The site showcases personal information, education, skills, projects, and contact details in a modern, responsive design.
+This is a static portfolio website for Aononto Jahan Junnurain, built with vanilla HTML5, CSS3, and JavaScript. The site showcases personal information, education, skills, projects and contact details in a modern, responsive design .
 
 ## Development Commands
 
