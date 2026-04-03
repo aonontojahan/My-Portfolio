@@ -314,28 +314,52 @@ const portfolioData = {
     },
 
     // SERVICES SECTION
-    service_web: {
-        title: "Web Development",
+    service_frontend: {
+        title: "Frontend Development",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-        description: "I provide end-to-end web solutions, from initial wireframing to full production deployment.",
+        description: "I design and develop modern, responsive portfolio websites to showcase your skills, projects, and personal brand. Clean UI, smooth animations, and optimized performance.",
+        sectionTitle: "What I Provides",
         projects: [
-            { name: "SaaS Platforms", desc: "Building subscription-based software with robust user management.", tech: ["Next.js", "Stripe", "PostgreSQL"] }
+            { name: "Responsive design", desc: "Ensuring an optimal experience seamlessly across all devices.", tech: ["Tailwind", "CSS3", "Media Queries"] },
+            { name: "Clean UI implementation", desc: "Modern and intuitive interfaces designed to maximize engagement.", tech: ["React", "HTML5", "UX/UI"] },
+            { name: "Cross-browser compatibility", desc: "Your site functions beautifully on Chrome, Firefox, Safari, and more.", tech: ["Polyfills", "Testing"] },
+            { name: "Interactive elements", desc: "Micro-animations and dynamic components bringing your views to life.", tech: ["JavaScript", "Framer Motion"] }
         ]
     },
-    service_api: {
-        title: "API & Integration",
+    service_backend: {
+        title: "FastAPI Backend Development",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
-        description: "Seamlessly connecting your platforms with third-party software and complex backend services.",
+        description: "I develop scalable and secure backend systems using FastAPI, including REST APIs, authentication systems, and database integration.",
+        sectionTitle: "What I Provides",
         projects: [
-            { name: "Third-party Sync", desc: "Integrating CRMs, Payment Gateways, and ERPs into existing apps.", tech: ["REST", "GraphQL", "OAuth"] }
+            { name: "REST API development", desc: "Fast and reliable API endpoints that power your frontend.", tech: ["Python", "FastAPI"] },
+            { name: "JWT authentication", desc: "Secure token-based authentication protecting your user data.", tech: ["Security", "OAuth", "JWT"] },
+            { name: "OTP/email verification", desc: "Reliable verification methods for user registration.", tech: ["SMTP", "Cryptography"] },
+            { name: "PostgreSQL integration", desc: "Robust database schemas built for efficiency and scale.", tech: ["SQLAlchemy", "PostgreSQL"] }
+        ]
+    },
+    service_fullstack: {
+        title: "Full Stack Web Applications",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+        description: "I build complete web applications by combining modern frontend design with powerful backend systems, delivering fully functional and scalable solutions.",
+        sectionTitle: "What I Provides",
+        projects: [
+            { name: "End-to-end development", desc: "Delivering complete applications ready for your users.", tech: ["Full Stack", "Project Management"] },
+            { name: "Frontend + Backend integration", desc: "Seamless communication between client interfaces and server logic.", tech: ["APIs", "WebSockets"] },
+            { name: "Database management", desc: "Ensuring your data structures are resilient, backed up, and optimized.", tech: ["SQL", "NoSQL"] },
+            { name: "Scalable architecture", desc: "Built with production-grade components that grow with your userbase.", tech: ["Microservices", "Docker"] }
         ]
     },
     service_consulting: {
-        title: "Tech Consulting",
+        title: "Technical Consulting",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
         description: "Helping teams choose the right tech stack and architecture for their specific business needs.",
+        sectionTitle: "What I Provides",
         projects: [
-            { name: "Dev Team Mentorship", desc: "Upskilling junior engineers in modern JavaScript practices.", tech: ["Code Review", "Architecture Planning"] }
+            { name: "Architecture design", desc: "Drafting robust technical architectures and deployment pipelines.", tech: ["System Design", "AWS", "Planning"] },
+            { name: "Code Review & Refactoring", desc: "Improving code quality to minimize technical debt.", tech: ["Best Practices", "Clean Code"] },
+            { name: "Performance Optimization", desc: "Auditing bottlenecks and drastically improving speed.", tech: ["Profiling", "Caching"] },
+            { name: "Tech Stack Selection", desc: "Advising on the ideal modern tools for your business objective.", tech: ["Consulting", "Strategy"] }
         ]
     }
 };
