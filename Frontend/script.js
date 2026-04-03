@@ -346,7 +346,7 @@ const portfolioData = {
         projects: [
             { name: "End-to-end development", desc: "Delivering complete applications ready for your users.", tech: ["Full Stack", "Project Management"] },
             { name: "Frontend + Backend integration", desc: "Seamless communication between client interfaces and server logic.", tech: ["APIs", "WebSockets"] },
-            { name: "Database management", desc: "Ensuring your data structures are resilient, backed up, and optimized.", tech: ["SQL", "NoSQL"] },
+            { name: "Database management", desc: "Ensuring your data structures are resilient, backed up, and optimized.", tech: ["SQL", "PostgreSQL" ] },
             { name: "Scalable architecture", desc: "Built with production-grade components that grow with your userbase.", tech: ["Microservices", "Docker"] }
         ]
     },
