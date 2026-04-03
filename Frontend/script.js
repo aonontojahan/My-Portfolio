@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 150)) {
+        if (window.scrollY >= (sectionTop - 150)) {
             current = section.getAttribute('id');
         }
     });
@@ -42,6 +42,9 @@ window.addEventListener('scroll', () => {
     });
 });
 
+const hamburger = document.getElementById('hamburger');
+const navRight = document.querySelector('.nav-right');
+
 // Smooth Scrolling for all internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -52,17 +55,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
             // Close mobile menu after clicking a link
-            navRight.classList.remove('mobile-active');
+            navRight?.classList.remove('mobile-active');
         }
     });
 });
 
-const hamburger = document.getElementById('hamburger');
-const navRight = document.querySelector('.nav-right');
-
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        navRight.classList.toggle('mobile-active');
+        navRight?.classList.toggle('mobile-active');
         // Optional: Toggle hamburger icon animation here
     });
 }

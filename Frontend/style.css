@@ -76,6 +76,36 @@ ul {
   background: var(--accent-color);
 }
 
+/* Utility & Custom Classes */
+.mt-15 {
+  margin-top: 15px;
+}
+
+.hero-desc {
+  max-width: 800px;
+  margin-top: 10px;
+}
+
+.get-in-touch-title {
+  font-size: 50px;
+}
+
+.say-hello-btn {
+  margin-top: 50px;
+  padding: 1.25rem 2.5rem;
+}
+
+.whatsapp-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-btn-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -156,6 +186,18 @@ ul {
 
 .nav-links a.active {
   color: var(--accent-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 4px 0;
 }
 
 /* Buttons */
@@ -305,6 +347,16 @@ ul {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.about-text {
+  text-align: justify;
+  text-align-last: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 0.5in;
   color: var(--text-main);
   line-height: 1.6;
 }
@@ -793,7 +845,7 @@ ul {
   margin: 0 auto;
   padding: 0 1in 50px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1.4fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 50px;
 }
 
@@ -823,9 +875,9 @@ ul {
 }
 
 .footer-socials {
-  display: grid;
-  grid-template-columns: repeat(4, 40px);
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Changed to wrap just in case mobile squishes them, but behaves as one line on desktop */
+  gap: 8px;
   margin-top: 8px;
 }
 
@@ -859,11 +911,16 @@ ul {
 .social-icon[aria-label="LinkedIn"]:hover   { border-color: #0077b5; color: #0077b5; background: rgba(0,119,181,.08); }
 .social-icon[aria-label="GitHub"]:hover     { border-color: #6e5494; color: #6e5494; background: rgba(110,84,148,.08); }
 .social-icon[aria-label="Pinterest"]:hover  { border-color: #bd081c; color: #bd081c; background: rgba(189,8,28,.08); }
+.social-icon[aria-label="YouTube"]:hover    { border-color: #ff0000; color: #ff0000; background: rgba(255,0,0,.08); }
 
 .footer-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.footer-container > .footer-col:last-child {
+  align-items: flex-end;
 }
 
 .footer-heading {
