@@ -777,3 +777,235 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+/* ============================================
+   PREMIUM FOOTER STYLES
+   ============================================ */
+
+#footer {
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #010a1a 100%);
+  border-top: 1px solid rgba(100, 255, 218, 0.1);
+  padding: 70px 0 0;
+  color: var(--text-main);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1in 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr;
+  gap: 50px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-family: monospace;
+  transition: var(--transition);
+}
+
+.footer-logo:hover { opacity: 0.8; }
+
+.footer-tagline {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-main);
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-light);
+  border: 1px solid var(--bg-lighter);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-icon svg { width: 18px; height: 18px; }
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+  background: var(--accent-glow);
+  color: var(--accent-color);
+}
+
+.social-icon[aria-label="Facebook"]:hover   { border-color: #1877f2; color: #1877f2; background: rgba(24,119,242,.08); }
+.social-icon[aria-label="Instagram"]:hover  { border-color: #e4405f; color: #e4405f; background: rgba(228,64,95,.08); }
+.social-icon[aria-label="X / Twitter"]:hover{ border-color: #fff;    color: #fff;    background: rgba(255,255,255,.08); }
+.social-icon[aria-label="Threads"]:hover    { border-color: #fff;    color: #fff;    background: rgba(255,255,255,.08); }
+.social-icon[aria-label="LinkedIn"]:hover   { border-color: #0077b5; color: #0077b5; background: rgba(0,119,181,.08); }
+.social-icon[aria-label="GitHub"]:hover     { border-color: #6e5494; color: #6e5494; background: rgba(110,84,148,.08); }
+.social-icon[aria-label="Pinterest"]:hover  { border-color: #bd081c; color: #bd081c; background: rgba(189,8,28,.08); }
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 30px; height: 2px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a::before { content: '›'; color: var(--accent-color); font-size: 16px; }
+.footer-links a:hover { color: var(--accent-color); padding-left: 4px; }
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.footer-contact-list li svg { width: 16px; height: 16px; min-width: 16px; color: var(--accent-color); }
+.footer-contact-list a { color: var(--text-main); text-decoration: none; transition: var(--transition); word-break: break-all; }
+.footer-contact-list a:hover { color: var(--accent-color); }
+
+.footer-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 13px;
+  border-radius: 4px;
+  transition: var(--transition);
+  width: fit-content;
+}
+
+.footer-cv-btn svg { width: 15px; height: 15px; }
+
+.footer-cv-btn:hover {
+  background: var(--accent-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(100, 255, 218, 0.15);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 22px 1in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom p { font-family: monospace; font-size: 12px; color: var(--text-main); }
+.footer-bottom span { color: var(--accent-color); }
+
+.heart { color: #e25555; display: inline-block; animation: heartbeat 1.5s ease infinite; }
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.3); }
+}
+
+@media (max-width: 900px) {
+  .footer-container { grid-template-columns: 1fr 1fr; padding: 0 30px 40px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-socials { grid-template-columns: repeat(7, 40px); }
+  .footer-bottom { padding: 20px 30px; flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 580px) {
+  .footer-container { grid-template-columns: 1fr; padding: 0 20px 40px; }
+  .footer-socials { grid-template-columns: repeat(4, 40px); }
+  .footer-bottom { padding: 20px; }
+}
+
+/* WhatsApp Footer Button */
+.whatsapp-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 11px 20px;
+  background: #25d366;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 13px;
+  border-radius: 4px;
+  transition: var(--transition);
+  width: fit-content;
+  font-weight: 600;
+}
+
+.whatsapp-footer-btn:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
