@@ -120,29 +120,28 @@ const portfolioData = {
 
     // BACKGROUND SECTION
     education: {
-        title: "BSc in Computer Science",
+        title: "BSc in Computer Science and Engineering",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
-        description: "Graduated with Honours from the University of Engineering and Technology. Specialized in AI and Software Engineering.",
+        description: "IUBAT - International University of Business Agriculture and Technology. CGPA: 3.49.",
         projects: [
-            { name: "Thesis: Neural Nets", desc: "Research on optimizing convolutional layers for edge devices.", tech: ["Python", "TensorFlow", "Keras"] }
+            { name: "Core Coursework", desc: "C, C++, Java, C#, Compiler Design, Networking, Software Engineering, System Design, Theory of Computation, Data Structures, DBMS, Computer Architecture, MIS, Programming Logic Structure.", tech: [] },
+            { name: "Thesis", desc: "Fusion-based Brain Tumor classification using Efficient Net-v2 and Swin Transformer: A deep learning approach. Achieved 96.5% accuracy.", tech: ["Deep Learning", "EfficientNet-v2", "Swin Transformer", "Python"] }
         ]
     },
-    career_current: {
-        title: "Software Engineer",
-        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
-        description: "Currently at Innovative Solutions Inc. delivering high-quality, robust production code for global clients.",
-        github: "https://github.com/aonontojahan",
+    hsc: {
+        title: "Higher Secondary Certificate (HSC)",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+        description: "Collectorate School and College, Rangpur in Science group. GPA: 5.00 (Session 2019).",
         projects: [
-            { name: "Prudential Integration", desc: "Seamless legacy data migration for a major insurance firm.", tech: ["Java", "Spring Boot", "SQL"] }
+            { name: "Science Track", desc: "Completed coursework focusing on Physics, Chemistry, Higher Mathematics, and Biology.", tech: [] }
         ]
     },
-    career_early: {
-        title: "Junior Web Developer",
-        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-        description: "Early career growth at Creative Pulse Agency, focused on responsive design and PHP-based CMS development.",
-        github: "https://github.com/aonontojahan",
+    ssc: {
+        title: "Secondary School Certificate (SSC)",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+        description: "Bhendabari M. L High School in Science group. GPA: 5.00 (Session 2017).",
         projects: [
-            { name: "Marketing Site v2", desc: "Complete redesign of the agency's primary client-facing platform.", tech: ["PHP", "WordPress", "jQuery"] }
+            { name: "Science Track", desc: "Built foundational knowledge in general sciences and analytical problem solving.", tech: [] }
         ]
     },
 
