@@ -85,8 +85,8 @@ const portfolioData = {
         description: "Bridging the gap between front-end aesthetics and back-end logic with high-performance integrations.",
         github: "https://github.com/aonontojahan",
         projects: [
-            { name: "E-Commerce Core", desc: "Monolithic to microservices migration for a major retail client.", tech: ["Node.js", "Docker", "Redis"] },
-            { name: "Real-time Analytics", desc: "Dashboard for monitoring live user interactions across multi-tenant apps.", tech: ["React", "Socket.io", "D3.js"] }
+            { name: "Smart Calculator", desc: "A smart calculator application providing advanced features with a clean UI.", link: "https://github.com/aonontojahan/Smart-Calculator", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] },
+            { name: "Real Time Chat App", desc: "A real-time chat application utilizing WebSockets for instant messaging.", link: "https://github.com/aonontojahan/realtime-chat-app", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] }
         ]
     },
     engineer: {
@@ -95,7 +95,7 @@ const portfolioData = {
         description: "Solving complex technical challenges with clean, efficient, and scalable code following SOLID principles.",
         github: "https://github.com/aonontojahan",
         projects: [
-            { name: "Distributed Cache", desc: "Built a custom caching layer that reduced database load by 60%.", tech: ["Go", "gRPC", "Protobuf"] }
+            { name: "Resale Marketplace for Electronics Devices", desc: "A robust electronic device marketplace platform with real-time features and secure backend.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets", "HTML", "CSS", "JavaScript"] }
         ]
     },
     manager: {
@@ -103,16 +103,18 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
         description: "Leading cross-functional teams to deliver high-impact digital solutions using Agile methodologies.",
         projects: [
-            { name: "Agile Transformation", desc: "Successfully transitioned a 50-person engineering department to Scrum.", tech: ["Scrum", "Jira", "Kanban"] }
+            { name: "Event Management System", desc: "I manage software projects from planning to delivery. Focused on team coordination, timelines, and quality outcomes. Bridging the gap between technical execution and business goals.", link: "https://github.com/aonontojahan/Event-Management-System", tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"] },
+            { name: "Resale Marketplace for Electronics", desc: "Managed the technical architecture and delivery of a real-time electronic marketplace, ensuring scalability and performance.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets", "HTML", "CSS", "JavaScript"] }
         ]
     },
     solver: {
         title: "Problem Solver",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
-        description: "An analytical thinker who thrives on dissecting intricate technical bugs and system optimizations.",
+        description: "An analytical thinker who thrives on dissecting intricate technical challenges and competitive programming.",
         github: "https://github.com/aonontojahan",
         projects: [
-            { name: "Memory Leak Fix", desc: "Identified and fixed a persistent leak in a high-traffic production service.", tech: ["Profiling", "Memory Management"] }
+            { name: "Competitive Programming Practice Hub", desc: "My approach and solution repository for learning and solving algorithmic challenges.", link: "https://github.com/aonontojahan/CP-Practice-Hub", tech: ["C++", "Python", "Algorithms", "Data Structures"] },
+            { name: "Learn Python", desc: "Educational repository focused on mastering Python concepts.", link: "https://github.com/aonontojahan/Learn-Python", tech: ["Python", "Scripting", "OOP"] }
         ]
     },
 
@@ -252,8 +254,13 @@ cards.forEach(card => {
             data.projects.forEach(project => {
                 const projectEl = document.createElement('div');
                 projectEl.className = 'project-item';
+                
+                const titleHtml = project.link 
+                    ? `<a href="${project.link}" target="_blank" style="color: var(--text-white); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-white)'">${project.name} <svg style="width:14px;height:14px;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>`
+                    : project.name;
+                    
                 projectEl.innerHTML = `
-                    <h4>${project.name}</h4>
+                    <h4>${titleHtml}</h4>
                     <p>${project.desc}</p>
                     <div class="project-tech">
                         ${project.tech.map(t => `<span class="project-tag">${t}</span>`).join('')}
