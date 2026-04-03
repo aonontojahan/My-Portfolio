@@ -146,31 +146,67 @@ const portfolioData = {
     },
 
     // EXPERIENCE SECTION
-    project_one: {
-        title: "Productivity Organizer",
-        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`,
-        description: "A specialized daily routine tracker that helps users optimize their productivity via data visualization.",
-        github: "https://github.com/aonontojahan/productivity-app",
+    proj_calc: {
+        title: "Smart Calculator",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+        description: "Advanced calculator with clean UI.",
+        github: "https://github.com/aonontojahan/Smart-Calculator",
         projects: [
-            { name: "Task Engine", desc: "Sub-millisecond state updates for intensive user interaction.", tech: ["Redux", "Worker Threads"] }
+            { name: "Smart Calculator", desc: "Built with a modern frontend and a scalable API backend.", link: "https://github.com/aonontojahan/Smart-Calculator", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] }
         ]
     },
-    project_two: {
-        title: "E-Commerce Platform",
-        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
-        description: "Modern, secure marketplace with real-time inventory management and multi-currency Stripe support.",
-        github: "https://github.com/aonontojahan/ecommerce-site",
+    proj_chat: {
+        title: "Real Time Chat App",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+        description: "Instant messaging application utilizing WebSockets.",
+        github: "https://github.com/aonontojahan/realtime-chat-app",
         projects: [
-            { name: "Checkout Flow", desc: "Highly secure, PCI-compliant payment processing system.", tech: ["Stripe API", "Next.js", "Supabase"] }
+            { name: "Chat Engine", desc: "Backend infrastructure for rapid message delivery using WebSockets.", link: "https://github.com/aonontojahan/realtime-chat-app", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] }
         ]
     },
-    project_three: {
-        title: "Security Audit Flow",
-        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-        description: "Implemented an automated security audit pipeline that protected over 50k users from session hijacking.",
-        github: "https://github.com/aonontojahan",
+    proj_marketplace: {
+        title: "Resale Marketplace",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>`,
+        description: "Electronic device marketplace platform using FastAPI and WebSockets.",
+        github: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices",
         projects: [
-            { name: "Vulnerability Scanner", desc: "Automated pattern matching for outdated dependencies.", tech: ["Python", "OWASP ZAP"] }
+            { name: "Marketplace Core", desc: "Developed the core backend with secure authentication and WebSocket based trading logic.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets", "HTML", "CSS", "JavaScript"] }
+        ]
+    },
+    proj_event: {
+        title: "Event Management System",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+        description: "System managing project lifecycles, team coordination, and business timelines.",
+        github: "https://github.com/aonontojahan/Event-Management-System",
+        projects: [
+            { name: "System Orchestration", desc: "Bridging the gap between technical execution and business goals.", link: "https://github.com/aonontojahan/Event-Management-System", tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"] }
+        ]
+    },
+    proj_compiler: {
+        title: "Young Programmer Compiler",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+        description: "A custom compiler written in Python capturing syntax trees and tokenization.",
+        github: "https://github.com/aonontojahan/Young-Programmer-Compiler",
+        projects: [
+            { name: "Python Compiler", desc: "Applying Python Tokenization and Abstract Syntax Tree extraction.", link: "https://github.com/aonontojahan/Young-Programmer-Compiler", tech: ["Python", "Tokenization", "Syntax Tree"] }
+        ]
+    },
+    proj_bookshop: {
+        title: "Bookshop Management System",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+        description: "Full-stack backend integrating PostgreSQL, FastAPI, and an HTML API.",
+        github: "https://github.com/aonontojahan/Bookshop-Management-System",
+        projects: [
+            { name: "Bookshop API", desc: "Basic CRUD operations and includes a basic HTML + Bootstrap frontend integrated with the backend.", link: "https://github.com/aonontojahan/Bookshop-Management-System", tech: ["Python", "PostgreSQL", "FastAPI", "HTML", "Bootstrap"] }
+        ]
+    },
+    proj_mslat: {
+        title: "Mini System Monitoring & Log Analysis Toolkit",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+        description: "Bash-orchestrated Linux system toolkit for health checks and log analysis.",
+        github: "https://github.com/aonontojahan/Mini-System-Monitoring-Log-Analysis-Toolkit-MSLAT",
+        projects: [
+            { name: "MSLAT", desc: "Scripts orchestrating setup, health checks, log collection, process monitoring, and report generation via master script (run_all.sh).", link: "https://github.com/aonontojahan/Mini-System-Monitoring-Log-Analysis-Toolkit-MSLAT", tech: ["Ubuntu/Linux", "Bash shell", "Terminal access"] }
         ]
     },
 
