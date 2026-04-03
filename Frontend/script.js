@@ -67,50 +67,164 @@ if (hamburger) {
     });
 }
 
-// Modal Logic for About Section
+// Modal Logic for All Sections
 const modal = document.getElementById('about-modal');
 const modalClose = document.querySelector('.modal-close');
 const modalTitle = document.getElementById('modal-title');
 const modalDesc = document.getElementById('modal-description');
 const modalIcon = document.querySelector('.modal-body .modal-icon');
 const modalProjects = document.getElementById('modal-projects');
-const cards = document.querySelectorAll('.about-card');
+const modalGithub = document.getElementById('modal-github');
+const cards = document.querySelectorAll('.interactive-card');
 
-const roleData = {
+const portfolioData = {
+    // ABOUT SECTION
     fullstack: {
         title: "Full Stack Developer",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-        description: "I specialize in bridging the gap between front-end aesthetics and back-end logic, focusing on end-to-end performance and seamless API integrations.",
+        description: "Bridging the gap between front-end aesthetics and back-end logic with high-performance integrations.",
+        github: "https://github.com/aonontojahan",
         projects: [
-            { name: "E-Commerce Platform", desc: "A full-featured online store with Stripe integration and dynamic inventory management.", tech: ["React", "Node.js", "Stripe", "MongoDB"] },
-            { name: "Collaborative Whiteboard", desc: "Real-time shared workspace for remote teams using WebSockets for low-latency updates.", tech: ["Socket.io", "React", "Express"] }
+            { name: "E-Commerce Core", desc: "Monolithic to microservices migration for a major retail client.", tech: ["Node.js", "Docker", "Redis"] },
+            { name: "Real-time Analytics", desc: "Dashboard for monitoring live user interactions across multi-tenant apps.", tech: ["React", "Socket.io", "D3.js"] }
         ]
     },
     engineer: {
         title: "Software Engineer",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
-        description: "Focused on solving complex technical challenges with clean, efficient, and scalable code following advanced software design patterns.",
+        description: "Solving complex technical challenges with clean, efficient, and scalable code following SOLID principles.",
+        github: "https://github.com/aonontojahan",
         projects: [
-            { name: "Distributed Logging System", desc: "Highly available log aggregator with structured storage and optimized search capabilities.", tech: ["Go", "Kafka", "Elasticsearch"] },
-            { name: "API Gateway Proxy", desc: "High-performance middleware handling centralized authentication and intelligent rate limiting.", tech: ["Python", "Redis", "Nginx"] }
+            { name: "Distributed Cache", desc: "Built a custom caching layer that reduced database load by 60%.", tech: ["Go", "gRPC", "Protobuf"] }
         ]
     },
     manager: {
         title: "Project Manager",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-        description: "Skilled in leading cross-functional teams to deliver high-impact digital solutions using Agile and Scrum methodologies.",
+        description: "Leading cross-functional teams to deliver high-impact digital solutions using Agile methodologies.",
         projects: [
-            { name: "FinTech App Launch", desc: "Led a team of 15 to release a cross-platform mobile banking solution in record time.", tech: ["Agile", "Scrum", "Jira"] },
-            { name: "System Modernization", desc: "Managed the full-scale migration of legacy data to a cloud-native AWS architecture.", tech: ["AWS", "Cloud Migration"] }
+            { name: "Agile Transformation", desc: "Successfully transitioned a 50-person engineering department to Scrum.", tech: ["Scrum", "Jira", "Kanban"] }
         ]
     },
     solver: {
         title: "Problem Solver",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
-        description: "An analytical thinker who thrives on dissecting intricate technical bugs and optimizing systems for maximum performance.",
+        description: "An analytical thinker who thrives on dissecting intricate technical bugs and system optimizations.",
+        github: "https://github.com/aonontojahan",
         projects: [
-            { name: "Query Optimizer", desc: "Identified and resolved critical database bottlenecks, gaining 10x faster lookups.", tech: ["Database Admin", "Optimization"] },
-            { name: "Auth Flow Security Audit", desc: "Fixed deep-rooted session vulnerability that protected over 50k users globally.", tech: ["Cybersecurity", "Ethics"] }
+            { name: "Memory Leak Fix", desc: "Identified and fixed a persistent leak in a high-traffic production service.", tech: ["Profiling", "Memory Management"] }
+        ]
+    },
+
+    // BACKGROUND SECTION
+    education: {
+        title: "BSc in Computer Science",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+        description: "Graduated with Honours from the University of Engineering and Technology. Specialized in AI and Software Engineering.",
+        projects: [
+            { name: "Thesis: Neural Nets", desc: "Research on optimizing convolutional layers for edge devices.", tech: ["Python", "TensorFlow", "Keras"] }
+        ]
+    },
+    career_current: {
+        title: "Software Engineer",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
+        description: "Currently at Innovative Solutions Inc. delivering high-quality, robust production code for global clients.",
+        github: "https://github.com/aonontojahan",
+        projects: [
+            { name: "Prudential Integration", desc: "Seamless legacy data migration for a major insurance firm.", tech: ["Java", "Spring Boot", "SQL"] }
+        ]
+    },
+    career_early: {
+        title: "Junior Web Developer",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+        description: "Early career growth at Creative Pulse Agency, focused on responsive design and PHP-based CMS development.",
+        github: "https://github.com/aonontojahan",
+        projects: [
+            { name: "Marketing Site v2", desc: "Complete redesign of the agency's primary client-facing platform.", tech: ["PHP", "WordPress", "jQuery"] }
+        ]
+    },
+
+    // EXPERIENCE SECTION
+    project_one: {
+        title: "Productivity Organizer",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`,
+        description: "A specialized daily routine tracker that helps users optimize their productivity via data visualization.",
+        github: "https://github.com/aonontojahan/productivity-app",
+        projects: [
+            { name: "Task Engine", desc: "Sub-millisecond state updates for intensive user interaction.", tech: ["Redux", "Worker Threads"] }
+        ]
+    },
+    project_two: {
+        title: "E-Commerce Platform",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
+        description: "Modern, secure marketplace with real-time inventory management and multi-currency Stripe support.",
+        github: "https://github.com/aonontojahan/ecommerce-site",
+        projects: [
+            { name: "Checkout Flow", desc: "Highly secure, PCI-compliant payment processing system.", tech: ["Stripe API", "Next.js", "Supabase"] }
+        ]
+    },
+    project_three: {
+        title: "Security Audit Flow",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+        description: "Implemented an automated security audit pipeline that protected over 50k users from session hijacking.",
+        github: "https://github.com/aonontojahan",
+        projects: [
+            { name: "Vulnerability Scanner", desc: "Automated pattern matching for outdated dependencies.", tech: ["Python", "OWASP ZAP"] }
+        ]
+    },
+
+    // EXPERTISE SECTION
+    exp_frontend: {
+        title: "Frontend Mastery",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+        description: "Building responsive, accessible, and performant user interfaces with modern tech stacks.",
+        github: "https://github.com/aonontojahan",
+        projects: [
+            { name: "React Components", desc: "Library of high-performance UI elements for internal use.", tech: ["React", "Storybook", "Tailwind"] }
+        ]
+    },
+    exp_backend: {
+        title: "Backend Scalability",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+        description: "Architecting secure and efficient server-side infrastructures that scale with user demand.",
+        github: "https://github.com/aonontojahan",
+        projects: [
+            { name: "Microservices API", desc: "Modular backend handling millions of requests per day.", tech: ["Node.js", "Express", "RabbitMQ"] }
+        ]
+    },
+    exp_devops: {
+        title: "Cloud & DevOps",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`,
+        description: "Optimizing deployment pipelines and managing cloud infrastructure for reliability.",
+        github: "https://github.com/aonontojahan",
+        projects: [
+            { name: "CI/CD Pipeline", desc: "Automated testing and deployment flow using GitHub Actions.", tech: ["Docker", "AWS", "GitHub Actions"] }
+        ]
+    },
+
+    // SERVICES SECTION
+    service_web: {
+        title: "Web Development",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+        description: "I provide end-to-end web solutions, from initial wireframing to full production deployment.",
+        projects: [
+            { name: "SaaS Platforms", desc: "Building subscription-based software with robust user management.", tech: ["Next.js", "Stripe", "PostgreSQL"] }
+        ]
+    },
+    service_api: {
+        title: "API & Integration",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
+        description: "Seamlessly connecting your platforms with third-party software and complex backend services.",
+        projects: [
+            { name: "Third-party Sync", desc: "Integrating CRMs, Payment Gateways, and ERPs into existing apps.", tech: ["REST", "GraphQL", "OAuth"] }
+        ]
+    },
+    service_consulting: {
+        title: "Tech Consulting",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+        description: "Helping teams choose the right tech stack and architecture for their specific business needs.",
+        projects: [
+            { name: "Dev Team Mentorship", desc: "Upskilling junior engineers in modern JavaScript practices.", tech: ["Code Review", "Architecture Planning"] }
         ]
     }
 };
@@ -118,12 +232,20 @@ const roleData = {
 cards.forEach(card => {
     card.addEventListener('click', () => {
         const role = card.getAttribute('data-role');
-        const data = roleData[role];
+        const data = portfolioData[role];
         
         if (data) {
             modalTitle.textContent = data.title;
             modalDesc.textContent = data.description;
             modalIcon.innerHTML = data.icon;
+            
+            // Handle GitHub visibility
+            if (data.github) {
+                modalGithub.href = data.github;
+                modalGithub.style.display = 'flex';
+            } else {
+                modalGithub.style.display = 'none';
+            }
             
             // Clear and render projects
             modalProjects.innerHTML = '';
