@@ -75,6 +75,7 @@ const modalDesc = document.getElementById('modal-description');
 const modalIcon = document.querySelector('.modal-body .modal-icon');
 const modalProjects = document.getElementById('modal-projects');
 const modalGithub = document.getElementById('modal-github');
+const modalSectionTitle = document.querySelector('.modal-section h3');
 const cards = document.querySelectorAll('.interactive-card');
 
 const portfolioData = {
@@ -216,27 +217,100 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
         description: "Building responsive, accessible, and performant user interfaces with modern tech stacks.",
         github: "https://github.com/aonontojahan",
-        projects: [
-            { name: "React Components", desc: "Library of high-performance UI elements for internal use.", tech: ["React", "Storybook", "Tailwind"] }
-        ]
+        sectionTitle: "My Core Frontend Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-html5-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">HTML5</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-css3-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">CSS3</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-javascript-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">JavaScript</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-react-original colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">React</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-nextjs-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">Next.js</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-tailwindcss-original colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Tailwind</p></div>
+            </div>
+        `
     },
     exp_backend: {
         title: "Backend Scalability",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
         description: "Architecting secure and efficient server-side infrastructures that scale with user demand.",
         github: "https://github.com/aonontojahan",
-        projects: [
-            { name: "Microservices API", desc: "Modular backend handling millions of requests per day.", tech: ["Node.js", "Express", "RabbitMQ"] }
-        ]
+        sectionTitle: "My Core Backend Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-python-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Python</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-fastapi-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">FastAPI</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-postgresql-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">PostgreSQL</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-php-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">PHP</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-mysql-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">MySQL</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-sqlalchemy-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">SQLAlchemy</p></div>
+                <div style="text-align: center; width: 80px;"><div style="font-size: 48px; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; margin: 0 auto;"><span class="tag" style="border: 1px solid var(--accent-color); background: transparent; padding: 2px 5px; font-size: 10px;">Pydantic</span></div><p style="margin-top: 10px; font-size: 14px;">Pydantic</p></div>
+            </div>
+        `
     },
     exp_devops: {
         title: "Cloud & DevOps",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`,
         description: "Optimizing deployment pipelines and managing cloud infrastructure for reliability.",
         github: "https://github.com/aonontojahan",
-        projects: [
-            { name: "CI/CD Pipeline", desc: "Automated testing and deployment flow using GitHub Actions.", tech: ["Docker", "AWS", "GitHub Actions"] }
-        ]
+        sectionTitle: "My Core DevOps Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-docker-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Docker</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-kubernetes-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Kubernetes</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-amazonwebservices-plain-wordmark colored" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">AWS</p></div>
+            </div>
+        `
+    },
+    exp_tools: {
+        title: "Tools & Platform",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+        description: "Essential tools and platforms for streamlining development and collaboration.",
+        github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-git-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Git</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-githubactions-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">GH Actions</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-vscode-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">VSCode</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-figma-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Figma</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-linux-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">Linux</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-ubuntu-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Ubuntu</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-windows8-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Windows</p></div>
+            </div>
+        `
+    },
+    exp_languages: {
+        title: "Programming Languages",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+        description: "Versatile in multiple programming languages to solve diverse computational challenges.",
+        github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core Languages",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-c-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-cplusplus-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C++</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-java-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Java</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-csharp-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C#</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-python-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Python</p></div>
+            </div>
+        `
+    },
+    exp_productivity: {
+        title: "Productivity Tools",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>`,
+        description: "Proficient with industry-standard software to manage documentation, spreadsheets, and presentations.",
+        github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core Productivity Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #107C41; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">X</div><p style="margin-top: 10px; font-size: 14px;">MS Excel</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #C43E1C; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">P</div><p style="margin-top: 10px; font-size: 14px;">MS PowerPoint</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #2B579A; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">W</div><p style="margin-top: 10px; font-size: 14px;">MS Word</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #4285F4; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📄</div><p style="margin-top: 10px; font-size: 14px;">Google Docs</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #0F9D58; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📊</div><p style="margin-top: 10px; font-size: 14px;">Google Sheets</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #F4B400; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📽</div><p style="margin-top: 10px; font-size: 14px;">Google Slides</p></div>
+            </div>
+        `
     },
 
     // SERVICES SECTION
@@ -286,26 +360,35 @@ cards.forEach(card => {
             
             // Clear and render projects
             modalProjects.innerHTML = '';
-            data.projects.forEach(project => {
-                const projectEl = document.createElement('div');
-                projectEl.className = 'project-item';
-                
-                const titleHtml = project.link 
-                    ? `<a href="${project.link}" target="_blank" style="color: var(--text-white); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-white)'">${project.name} <svg style="width:14px;height:14px;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>`
-                    : project.name;
+            
+            if (modalSectionTitle) {
+                modalSectionTitle.textContent = data.sectionTitle || 'Recent Work';
+            }
+            
+            if (data.contentHtml) {
+                modalProjects.innerHTML = data.contentHtml;
+            } else if (data.projects) {
+                data.projects.forEach(project => {
+                    const projectEl = document.createElement('div');
+                    projectEl.className = 'project-item';
                     
-                projectEl.innerHTML = `
-                    <h4>${titleHtml}</h4>
-                    <p>${project.desc}</p>
-                    <div class="project-tech">
-                        ${project.tech.map(t => `<span class="project-tag">${t}</span>`).join('')}
-                    </div>
-                `;
-                modalProjects.appendChild(projectEl);
-            });
+                    const titleHtml = project.link 
+                        ? `<a href="${project.link}" target="_blank" style="color: var(--text-white); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-white)'">${project.name} <svg style="width:14px;height:14px;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>`
+                        : project.name;
+                        
+                    projectEl.innerHTML = `
+                        <h4>${titleHtml}</h4>
+                        <p>${project.desc}</p>
+                        <div class="project-tech">
+                            ${project.tech.map(t => `<span class="project-tag">${t}</span>`).join('')}
+                        </div>
+                    `;
+                    modalProjects.appendChild(projectEl);
+                });
+            }
 
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden';  
         }
     });
 });
