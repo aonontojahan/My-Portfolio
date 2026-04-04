@@ -75,6 +75,7 @@ const modalDesc = document.getElementById('modal-description');
 const modalIcon = document.querySelector('.modal-body .modal-icon');
 const modalProjects = document.getElementById('modal-projects');
 const modalGithub = document.getElementById('modal-github');
+const modalSectionTitle = document.querySelector('.modal-section h3');
 const cards = document.querySelectorAll('.interactive-card');
 
 const portfolioData = {
@@ -216,52 +217,228 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
         description: "Building responsive, accessible, and performant user interfaces with modern tech stacks.",
         github: "https://github.com/aonontojahan",
-        projects: [
-            { name: "React Components", desc: "Library of high-performance UI elements for internal use.", tech: ["React", "Storybook", "Tailwind"] }
-        ]
+        sectionTitle: "My Core Frontend Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-html5-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">HTML5</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-css3-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">CSS3</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-javascript-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">JavaScript</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-react-original colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">React</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-nextjs-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">Next.js</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-tailwindcss-original colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Tailwind</p></div>
+            </div>
+        `
     },
     exp_backend: {
         title: "Backend Scalability",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
         description: "Architecting secure and efficient server-side infrastructures that scale with user demand.",
         github: "https://github.com/aonontojahan",
-        projects: [
-            { name: "Microservices API", desc: "Modular backend handling millions of requests per day.", tech: ["Node.js", "Express", "RabbitMQ"] }
-        ]
+        sectionTitle: "My Core Backend Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-python-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Python</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-fastapi-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">FastAPI</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-postgresql-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">PostgreSQL</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-php-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">PHP</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-mysql-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">MySQL</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-sqlalchemy-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">SQLAlchemy</p></div>
+                <div style="text-align: center; width: 80px;"><div style="font-size: 48px; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; margin: 0 auto;"><span class="tag" style="border: 1px solid var(--accent-color); background: transparent; padding: 2px 5px; font-size: 10px;">Pydantic</span></div><p style="margin-top: 10px; font-size: 14px;">Pydantic</p></div>
+            </div>
+        `
     },
     exp_devops: {
         title: "Cloud & DevOps",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`,
         description: "Optimizing deployment pipelines and managing cloud infrastructure for reliability.",
         github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core DevOps Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-docker-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Docker</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-kubernetes-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Kubernetes</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-amazonwebservices-plain-wordmark colored" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">AWS</p></div>
+            </div>
+        `
+    },
+    exp_tools: {
+        title: "Tools & Platform",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+        description: "Essential tools and platforms for streamlining development and collaboration.",
+        github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-git-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Git</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-githubactions-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">GH Actions</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-vscode-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">VSCode</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-figma-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Figma</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-linux-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">Linux</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-ubuntu-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Ubuntu</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-windows8-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Windows</p></div>
+            </div>
+        `
+    },
+    exp_languages: {
+        title: "Programming Languages",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+        description: "Versatile in multiple programming languages to solve diverse computational challenges.",
+        github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core Languages",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 80px;"><i class="devicon-c-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-cplusplus-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C++</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-java-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Java</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-csharp-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C#</p></div>
+                <div style="text-align: center; width: 80px;"><i class="devicon-python-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Python</p></div>
+            </div>
+        `
+    },
+    exp_productivity: {
+        title: "Productivity Tools",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>`,
+        description: "Proficient with industry-standard software to manage documentation, spreadsheets, and presentations.",
+        github: "https://github.com/aonontojahan",
+        sectionTitle: "My Core Productivity Tools",
+        contentHtml: `
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #107C41; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">X</div><p style="margin-top: 10px; font-size: 14px;">MS Excel</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #C43E1C; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">P</div><p style="margin-top: 10px; font-size: 14px;">MS PowerPoint</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #2B579A; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">W</div><p style="margin-top: 10px; font-size: 14px;">MS Word</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #4285F4; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📄</div><p style="margin-top: 10px; font-size: 14px;">Google Docs</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #0F9D58; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📊</div><p style="margin-top: 10px; font-size: 14px;">Google Sheets</p></div>
+                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #F4B400; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📽</div><p style="margin-top: 10px; font-size: 14px;">Google Slides</p></div>
+            </div>
+        `
+    },
+
+    // PROCESS SECTION
+    process_discovery: {
+        title: "Discovery Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+        description: "I dive deep into your vision to ensure every technical detail aligns with your business objectives.",
+        sectionTitle: "What I Do during Discovery",
         projects: [
-            { name: "CI/CD Pipeline", desc: "Automated testing and deployment flow using GitHub Actions.", tech: ["Docker", "AWS", "GitHub Actions"] }
+            { name: "Requirement Gathering", desc: "Detailed sessions to uncover every functional and non-functional need.", tech: ["Documentation", "Communication"] },
+            { name: "Market Analysis", desc: "Understanding the landscape to build a competitive edge.", tech: ["Research"] },
+            { name: "Technical Feasibility", desc: "Evaluating potential challenges and ensuring a viable path forward.", tech: ["Consulting"] }
+        ]
+    },
+    process_planning: {
+        title: "Planning Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+        description: "A solid blueprint is the foundation of any great project. I map out the most efficient path to success.",
+        sectionTitle: "What I Do during Planning",
+        projects: [
+            { name: "Tech Stack Selection", desc: "Choosing the perfect combination of modern tools for your project.", tech: ["Architecture"] },
+            { name: "Database Schema Design", desc: "Designing resilient and scalable data structures.", tech: ["SQL", "NoSQL"] },
+            { name: "Project Roadmapping", desc: "Setting clear milestones and expectations for timeline and budget.", tech: ["Agile Planning"] }
+        ]
+    },
+    process_feedback: {
+        title: "Feedback & Review Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`,
+        description: "Building your trust is as important as building your software. Continuous feedback ensures complete alignment.",
+        sectionTitle: "How Feedback Works",
+        projects: [
+            { name: "Design Review", desc: "Validating the UI/UX flows and visual language with you.", tech: ["UI/UX Validation"] },
+            { name: "Architecture Validation", desc: "Ensuring the technical plan meets your long-term vision.", tech: ["Consulting"] },
+            { name: "Continuous Alignment", desc: "Regular touchpoints to ensure the project stays on track.", tech: ["Communication"] }
+        ]
+    },
+    process_development: {
+        title: "Development Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
+        description: "Transforming ideas into high-performance reality with clean, scalable, and maintainable code.",
+        sectionTitle: "My Development Standards",
+        projects: [
+            { name: "Agile Sprints", desc: "Iterative development focusing on shipping functional features rapidly.", tech: ["Agile", "Scrum"] },
+            { name: "Clean Code Principles", desc: "Ensuring the codebase is maintainable and follows SOLID patterns.", tech: ["Quality Control"] },
+            { name: "Daily Progress Updates", desc: "Maintaining full transparency on what's being built.", tech: ["Transparency"] }
+        ]
+    },
+    process_testing: {
+        title: "Testing Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+        description: "Your users deserve perfection. I stress-test every feature to ensure a seamless experience.",
+        sectionTitle: "My Quality Assurance Process",
+        projects: [
+            { name: "Unit & Integration Testing", desc: "Automated checks to prevent regressions and bugs.", tech: ["Automation"] },
+            { name: "QA & Bug Squashing", desc: "Rigorous manual and automated passes for pure functionality.", tech: ["Reliability"] },
+            { name: "Performance Auditing", desc: "Optimizing speed and ensuring the app handles load gracefully.", tech: ["Optimization"] }
+        ]
+    },
+    process_deployment: {
+        title: "Deployment Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+        description: "Handling the entire launch process so your product starts strong and stays stable.",
+        sectionTitle: "What's in Deployment",
+        projects: [
+            { name: "CI/CD Implementation", desc: "Automating the path from code pushing to live deployment.", tech: ["CI/CD", "DevOps"] },
+            { name: "Security Hardening", desc: "Ensuring the production environment is resilient and safe.", tech: ["Security"] },
+            { name: "Production Launch", desc: "The final step to making your project live and accessible.", tech: ["Cloud Infrastructure"] }
+        ]
+    },
+    process_maintenance: {
+        title: "Maintenance Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>`,
+        description: "Long-term support to ensure your platform stays modern, secure, and ready to grow.",
+        sectionTitle: "Post-Launch Care",
+        projects: [
+            { name: "Ongoing Monitoring", desc: "Watching over server health and performance metrics.", tech: ["Health Checks"] },
+            { name: "Version Upgrades", desc: "Keeping dependencies fresh and protected against vulnerabilities.", tech: ["Security Fixes"] },
+            { name: "Performance Optimization", desc: "Continually refining speed and responsiveness as more users join.", tech: ["Refinement"] }
         ]
     },
 
     // SERVICES SECTION
-    service_web: {
-        title: "Web Development",
+    service_frontend: {
+        title: "Frontend Development",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-        description: "I provide end-to-end web solutions, from initial wireframing to full production deployment.",
+        description: "I design and develop modern, responsive portfolio websites to showcase your skills, projects, and personal brand. Clean UI, smooth animations, and optimized performance.",
+        sectionTitle: "What I Provides",
         projects: [
-            { name: "SaaS Platforms", desc: "Building subscription-based software with robust user management.", tech: ["Next.js", "Stripe", "PostgreSQL"] }
+            { name: "Responsive design", desc: "Ensuring an optimal experience seamlessly across all devices.", tech: ["Tailwind", "CSS3", "Media Queries"] },
+            { name: "Clean UI implementation", desc: "Modern and intuitive interfaces designed to maximize engagement.", tech: ["React", "HTML5", "UX/UI"] },
+            { name: "Cross-browser compatibility", desc: "Your site functions beautifully on Chrome, Firefox, Safari, and more.", tech: ["Polyfills", "Testing"] },
+            { name: "Interactive elements", desc: "Micro-animations and dynamic components bringing your views to life.", tech: ["JavaScript", "Framer Motion"] }
         ]
     },
-    service_api: {
-        title: "API & Integration",
+    service_backend: {
+        title: "FastAPI Backend Development",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
-        description: "Seamlessly connecting your platforms with third-party software and complex backend services.",
+        description: "I develop scalable and secure backend systems using FastAPI, including REST APIs, authentication systems, and database integration.",
+        sectionTitle: "What I Provides",
         projects: [
-            { name: "Third-party Sync", desc: "Integrating CRMs, Payment Gateways, and ERPs into existing apps.", tech: ["REST", "GraphQL", "OAuth"] }
+            { name: "REST API development", desc: "Fast and reliable API endpoints that power your frontend.", tech: ["Python", "FastAPI"] },
+            { name: "JWT authentication", desc: "Secure token-based authentication protecting your user data.", tech: ["Security", "OAuth", "JWT"] },
+            { name: "OTP/email verification", desc: "Reliable verification methods for user registration.", tech: ["SMTP", "Cryptography"] },
+            { name: "PostgreSQL integration", desc: "Robust database schemas built for efficiency and scale.", tech: ["SQLAlchemy", "PostgreSQL"] }
+        ]
+    },
+    service_fullstack: {
+        title: "Full Stack Web Applications",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+        description: "I build complete web applications by combining modern frontend design with powerful backend systems, delivering fully functional and scalable solutions.",
+        sectionTitle: "What I Provides",
+        projects: [
+            { name: "End-to-end development", desc: "Delivering complete applications ready for your users.", tech: ["Full Stack", "Project Management"] },
+            { name: "Frontend + Backend integration", desc: "Seamless communication between client interfaces and server logic.", tech: ["APIs", "WebSockets"] },
+            { name: "Database management", desc: "Ensuring your data structures are resilient, backed up, and optimized.", tech: ["SQL", "PostgreSQL" ] },
+            { name: "Scalable architecture", desc: "Built with production-grade components that grow with your userbase.", tech: ["Microservices", "Docker"] }
         ]
     },
     service_consulting: {
-        title: "Tech Consulting",
+        title: "Technical Consulting",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
         description: "Helping teams choose the right tech stack and architecture for their specific business needs.",
+        sectionTitle: "What I Provides",
         projects: [
-            { name: "Dev Team Mentorship", desc: "Upskilling junior engineers in modern JavaScript practices.", tech: ["Code Review", "Architecture Planning"] }
+            { name: "Architecture design", desc: "Drafting robust technical architectures and deployment pipelines.", tech: ["System Design", "AWS", "Planning"] },
+            { name: "Code Review & Refactoring", desc: "Improving code quality to minimize technical debt.", tech: ["Best Practices", "Clean Code"] },
+            { name: "Performance Optimization", desc: "Auditing bottlenecks and drastically improving speed.", tech: ["Profiling", "Caching"] },
+            { name: "Tech Stack Selection", desc: "Advising on the ideal modern tools for your business objective.", tech: ["Consulting", "Strategy"] }
         ]
     }
 };
@@ -286,26 +463,35 @@ cards.forEach(card => {
             
             // Clear and render projects
             modalProjects.innerHTML = '';
-            data.projects.forEach(project => {
-                const projectEl = document.createElement('div');
-                projectEl.className = 'project-item';
-                
-                const titleHtml = project.link 
-                    ? `<a href="${project.link}" target="_blank" style="color: var(--text-white); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-white)'">${project.name} <svg style="width:14px;height:14px;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>`
-                    : project.name;
+            
+            if (modalSectionTitle) {
+                modalSectionTitle.textContent = data.sectionTitle || 'Recent Work';
+            }
+            
+            if (data.contentHtml) {
+                modalProjects.innerHTML = data.contentHtml;
+            } else if (data.projects) {
+                data.projects.forEach(project => {
+                    const projectEl = document.createElement('div');
+                    projectEl.className = 'project-item';
                     
-                projectEl.innerHTML = `
-                    <h4>${titleHtml}</h4>
-                    <p>${project.desc}</p>
-                    <div class="project-tech">
-                        ${project.tech.map(t => `<span class="project-tag">${t}</span>`).join('')}
-                    </div>
-                `;
-                modalProjects.appendChild(projectEl);
-            });
+                    const titleHtml = project.link 
+                        ? `<a href="${project.link}" target="_blank" style="color: var(--text-white); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-white)'">${project.name} <svg style="width:14px;height:14px;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>`
+                        : project.name;
+                        
+                    projectEl.innerHTML = `
+                        <h4>${titleHtml}</h4>
+                        <p>${project.desc}</p>
+                        <div class="project-tech">
+                            ${project.tech.map(t => `<span class="project-tag">${t}</span>`).join('')}
+                        </div>
+                    `;
+                    modalProjects.appendChild(projectEl);
+                });
+            }
 
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden';  
         }
     });
 });
