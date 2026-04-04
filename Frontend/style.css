@@ -362,8 +362,9 @@ ul {
 }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
   margin-top: 30px;
 }
@@ -379,6 +380,7 @@ ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex: 0 1 280px;
 }
 
 .interactive-card:hover {
@@ -566,8 +568,9 @@ ul {
 
 /* Skills Section */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
 }
 
@@ -610,6 +613,7 @@ ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex: 0 1 280px;
 }
 
 .process-card:hover {
