@@ -33,7 +33,7 @@ body {
 }
 
 section {
-  padding: 60px 1in;
+  padding: 60px 5%;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -131,7 +131,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 01in;
+  padding: 0 4%;
 }
 
 .logo {
@@ -139,17 +139,31 @@ ul {
   font-size: 20px;
   color: var(--accent-color);
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  transition: var(--transition);
+}
+
+.logo:hover .nav-logo-img {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 25px;
 }
 
 .nav-links {
   display: flex;
-  gap: 35px;
+  gap: 25px;
   font-size: 13px;
   font-weight: 400;
 }
@@ -243,13 +257,14 @@ ul {
 
 /* Hero Section */
 #hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
+  padding: 120px 1in 60px;
 }
 
 .hero-img {
@@ -272,6 +287,7 @@ ul {
 .hero-title {
   font-size: clamp(40px, 8vw, 80px);
   margin-bottom: 10px;
+  line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -832,7 +848,7 @@ ul {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-container {
     padding: 0 25px;
   }
@@ -905,7 +921,7 @@ ul {
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1in 50px;
+  padding: 0 5% 50px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 50px;
@@ -923,8 +939,21 @@ ul {
   color: var(--accent-color);
   letter-spacing: 2px;
   text-decoration: none;
-  font-family: monospace;
+  font-family: var(--font-heading);
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-img {
+  height: 45px;
+  width: auto;
+  transition: var(--transition);
+}
+
+.footer-logo:hover .footer-logo-img {
+  transform: scale(1.1);
 }
 
 .footer-logo:hover { opacity: 0.8; }
@@ -1073,7 +1102,7 @@ ul {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 22px 1in;
+  padding: 22px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
