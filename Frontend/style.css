@@ -411,16 +411,65 @@ ul {
   width: 40px;
   height: 40px;
   margin-bottom: 20px;
+  transition: var(--transition);
 }
 
-.interactive-card h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
+.interactive-card:hover .card-icon {
+  transform: scale(1.2) translateY(-5px);
+  filter: drop-shadow(0 0 10px var(--accent-color));
 }
 
-.interactive-card p {
+/* Skill Items in Modal */
+.skills-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.skill-item {
+  text-align: center;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.skill-item i, 
+.skill-item .skill-box {
+  font-size: 48px;
+  margin-bottom: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-item:hover i,
+.skill-item:hover .skill-box {
+  transform: scale(1.3) translateY(-8px);
+  filter: drop-shadow(0 0 15px var(--accent-color));
+}
+
+.skill-item p {
   font-size: 14px;
-  margin-bottom: 20px;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.skill-item:hover p {
+  color: var(--accent-color);
+}
+
+.skill-box {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  font-size: 24px;
 }
 
 .view-more {

@@ -219,13 +219,13 @@ const portfolioData = {
         github: "https://github.com/aonontojahan",
         sectionTitle: "My Core Frontend Tools",
         contentHtml: `
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
-                <div style="text-align: center; width: 80px;"><i class="devicon-html5-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">HTML5</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-css3-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">CSS3</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-javascript-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">JavaScript</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-react-original colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">React</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-nextjs-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">Next.js</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-tailwindcss-original colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Tailwind</p></div>
+            <div class="skills-container">
+                <div class="skill-item"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
+                <div class="skill-item"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
+                <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
+                <div class="skill-item"><i class="devicon-react-original colored"></i><p>React</p></div>
+                <div class="skill-item"><i class="devicon-nextjs-plain" style="color: var(--text-white);"></i><p>Next.js</p></div>
+                <div class="skill-item"><i class="devicon-tailwindcss-original colored"></i><p>Tailwind</p></div>
             </div>
         `
     },
@@ -236,14 +236,14 @@ const portfolioData = {
         github: "https://github.com/aonontojahan",
         sectionTitle: "My Core Backend Tools",
         contentHtml: `
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
-                <div style="text-align: center; width: 80px;"><i class="devicon-python-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Python</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-fastapi-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">FastAPI</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-postgresql-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">PostgreSQL</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-php-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">PHP</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-mysql-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">MySQL</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-sqlalchemy-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">SQLAlchemy</p></div>
-                <div style="text-align: center; width: 80px;"><div style="font-size: 48px; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; margin: 0 auto;"><span class="tag" style="border: 1px solid var(--accent-color); background: transparent; padding: 2px 5px; font-size: 10px;">Pydantic</span></div><p style="margin-top: 10px; font-size: 14px;">Pydantic</p></div>
+            <div class="skills-container">
+                <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+                <div class="skill-item"><i class="devicon-fastapi-plain colored"></i><p>FastAPI</p></div>
+                <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><p>PostgreSQL</p></div>
+                <div class="skill-item"><i class="devicon-php-plain colored"></i><p>PHP</p></div>
+                <div class="skill-item"><i class="devicon-mysql-plain colored"></i><p>MySQL</p></div>
+                <div class="skill-item"><i class="devicon-sqlalchemy-plain" style="color: var(--text-white);"></i><p>Alchemy</p></div>
+                <div class="skill-item"><div class="skill-box" style="background: #013243; color: white;">P</div><p>Pydantic</p></div>
             </div>
         `
     },
@@ -254,10 +254,10 @@ const portfolioData = {
         github: "https://github.com/aonontojahan",
         sectionTitle: "My Core DevOps Tools",
         contentHtml: `
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
-                <div style="text-align: center; width: 80px;"><i class="devicon-docker-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Docker</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-kubernetes-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Kubernetes</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-amazonwebservices-plain-wordmark colored" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">AWS</p></div>
+            <div class="skills-container">
+                <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+                <div class="skill-item"><i class="devicon-kubernetes-plain colored"></i><p>Kubernetes</p></div>
+                <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark colored" style="color: var(--text-white);"></i><p>AWS</p></div>
             </div>
         `
     },
@@ -268,14 +268,14 @@ const portfolioData = {
         github: "https://github.com/aonontojahan",
         sectionTitle: "My Core Tools",
         contentHtml: `
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
-                <div style="text-align: center; width: 80px;"><i class="devicon-git-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Git</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-githubactions-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">GH Actions</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-vscode-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">VSCode</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-figma-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Figma</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-linux-plain" style="font-size: 48px; color: var(--text-white);"></i><p style="margin-top: 10px; font-size: 14px;">Linux</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-ubuntu-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Ubuntu</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-windows8-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Windows</p></div>
+            <div class="skills-container">
+                <div class="skill-item"><i class="devicon-git-plain colored"></i><p>Git</p></div>
+                <div class="skill-item"><i class="devicon-githubactions-plain" style="color: var(--text-white);"></i><p>Actions</p></div>
+                <div class="skill-item"><i class="devicon-vscode-plain colored"></i><p>VSCode</p></div>
+                <div class="skill-item"><i class="devicon-figma-plain colored"></i><p>Figma</p></div>
+                <div class="skill-item"><i class="devicon-linux-plain" style="color: var(--text-white);"></i><p>Linux</p></div>
+                <div class="skill-item"><i class="devicon-ubuntu-plain colored"></i><p>Ubuntu</p></div>
+                <div class="skill-item"><i class="devicon-windows8-plain colored"></i><p>Windows</p></div>
             </div>
         `
     },
@@ -286,12 +286,12 @@ const portfolioData = {
         github: "https://github.com/aonontojahan",
         sectionTitle: "My Core Languages",
         contentHtml: `
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
-                <div style="text-align: center; width: 80px;"><i class="devicon-c-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-cplusplus-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C++</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-java-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Java</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-csharp-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">C#</p></div>
-                <div style="text-align: center; width: 80px;"><i class="devicon-python-plain colored" style="font-size: 48px;"></i><p style="margin-top: 10px; font-size: 14px;">Python</p></div>
+            <div class="skills-container">
+                <div class="skill-item"><i class="devicon-c-plain colored"></i><p>C</p></div>
+                <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><p>C++</p></div>
+                <div class="skill-item"><i class="devicon-java-plain colored"></i><p>Java</p></div>
+                <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C#</p></div>
+                <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
             </div>
         `
     },
@@ -302,13 +302,13 @@ const portfolioData = {
         github: "https://github.com/aonontojahan",
         sectionTitle: "My Core Productivity Tools",
         contentHtml: `
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0;">
-                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #107C41; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">X</div><p style="margin-top: 10px; font-size: 14px;">MS Excel</p></div>
-                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #C43E1C; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">P</div><p style="margin-top: 10px; font-size: 14px;">MS PowerPoint</p></div>
-                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #2B579A; color: white; border-radius: 8px; width: 48px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">W</div><p style="margin-top: 10px; font-size: 14px;">MS Word</p></div>
-                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #4285F4; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📄</div><p style="margin-top: 10px; font-size: 14px;">Google Docs</p></div>
-                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #0F9D58; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📊</div><p style="margin-top: 10px; font-size: 14px;">Google Sheets</p></div>
-                <div style="text-align: center; width: 90px;"><div style="font-size: 24px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #F4B400; color: white; border-radius: 8px; width: 48px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">📽</div><p style="margin-top: 10px; font-size: 14px;">Google Slides</p></div>
+            <div class="skills-container">
+                <div class="skill-item"><div class="skill-box" style="background: #107C41; color: white;">X</div><p>MS Excel</p></div>
+                <div class="skill-item"><div class="skill-box" style="background: #C43E1C; color: white;">P</div><p>PowerPoint</p></div>
+                <div class="skill-item"><div class="skill-box" style="background: #2B579A; color: white;">W</div><p>MS Word</p></div>
+                <div class="skill-item"><div class="skill-box" style="background: #4285F4; color: white;">📄</div><p>G-Docs</p></div>
+                <div class="skill-item"><div class="skill-box" style="background: #0F9D58; color: white;">📊</div><p>G-Sheets</p></div>
+                <div class="skill-item"><div class="skill-box" style="background: #F4B400; color: white;">📽</div><p>G-Slides</p></div>
             </div>
         `
     },
