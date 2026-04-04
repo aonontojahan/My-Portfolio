@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aonontojahan.com</title>
-    <!-- Favicon would go here -->
-    <link rel="stylesheet" href="style.css">
+    <title>Full Stack Developer & Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/mylogo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logos/mylogo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logos/mylogo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/mylogo.ico">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Inter & Poppins Fonts -->
 </head>
@@ -16,7 +19,10 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="logo">AONONTO JAHAN</a>
+            <a href="#hero" class="logo">
+                <img src="assets/logos/mylogo.png" alt="Logo" class="nav-logo-img">
+                AONONTO JAHAN
+            </a>
 
             <div class="nav-right">
                 <ul class="nav-links">
@@ -30,8 +36,24 @@
                 </ul>
                 <div class="nav-btns">
                     <a href="#contact" class="btn btn-solid btn-sm">Let's Talk</a>
-                    <a href="../Assets/cv/Aononto Jahan CV.pdf" download="Aononto_Jahan_CV.pdf"
+                    <a href="assets/cv/Aononto Jahan CV.pdf" download="Aononto_Jahan_CV.pdf"
                         class="btn btn-outline btn-sm">Download CV</a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 
@@ -46,16 +68,16 @@
 
     <!-- Hero Section -->
     <section id="hero" class="reveal">
-        <img src="../Assets/images/aonontojahan.png" alt="Aononto Jahan" class="hero-img">
-        <h1 class="hero-title">Hi I am Aononto Jahan</h1>
+        <img src="assets/images/aonontojahan.png" alt="Aononto Jahan" class="hero-img">
+        <h1 class="hero-title">Hi I am <span>Aononto</span> Jahan.</h1>
         <p class="hero-desc">
-            I’m a software engineer specializing in building exceptional digital experiences.
+            A software engineer specializing in building exceptional digital experiences.
             I design and build scalable web applications.
             Focused on clean architecture, performance, and accessibility.
             Driven by creating seamless user experiences.
         </p>
         <div class="scroll-indicator">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#64ffda" stroke-width="2"
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" class="scroll-icon" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
             </svg>
@@ -517,10 +539,10 @@
             <span class="hero-pre">What's Next?</span>
             <h2 class="hero-title get-in-touch-title">Get In Touch</h2>
             <p>
-                My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get
-                back to you!</p>
+                Have an idea, project, or just want to connect? Feel free to reach out — I’d love to hear from you.
+            </p>
             <a href="https://mail.google.com/mail/?view=cm&amp;to=aonontojahan@gmail.com" target="_blank"
-                class="btn btn-outline say-hello-btn">Say Hello</a>
+                class="btn btn-outline say-hello-btn">Send Me a Message</a>
         </div>
     </section>
 
@@ -528,7 +550,10 @@
     <footer id="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="#hero" class="footer-logo">AONONTO JAHAN</a>
+                <a href="#hero" class="footer-logo">
+                    <img src="assets/logos/mylogo.png" alt="Logo" class="footer-logo-img">
+                    AONONTO JAHAN
+                </a>
                 <p class="footer-tagline">Full Stack Developer &amp; Software Engineer based in Bangladesh. Building
                     digital experiences that inspire.</p>
                 <div class="footer-socials">
@@ -609,7 +634,7 @@
                     </svg>
                     WhatsApp Me
                 </a>
-                <a href="../Assets/cv/Aononto Jahan CV.pdf" download="Aononto_Jahan_CV.pdf" class="footer-cv-btn">
+                <a href="assets/cv/Aononto Jahan CV.pdf" download="Aononto_Jahan_CV.pdf" class="footer-cv-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                         <polyline points="7 10 12 15 17 10" />
@@ -634,10 +659,10 @@
             <div class="modal-body">
                 <div class="modal-icon"></div>
                 <h2 id="modal-title">Role Title</h2>
+                <h3 id="modal-section-subtitle">Recent Work</h3>
                 <p id="modal-description">Full details go here.</p>
 
                 <div class="modal-section">
-                    <h3>Recent Work</h3>
                     <div id="modal-projects">
                         <!-- Dynamic Project Items -->
                     </div>
@@ -664,7 +689,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
