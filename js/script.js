@@ -75,7 +75,7 @@ const modalDesc = document.getElementById('modal-description');
 const modalIcon = document.querySelector('.modal-body .modal-icon');
 const modalProjects = document.getElementById('modal-projects');
 const modalGithub = document.getElementById('modal-github');
-const modalSectionTitle = document.querySelector('.modal-section h3');
+const modalSectionTitle = document.getElementById('modal-section-subtitle');
 const cards = document.querySelectorAll('.interactive-card');
 
 const portfolioData = {
@@ -85,9 +85,10 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
         description: "Bridging the gap between front-end aesthetics and back-end logic with high-performance integrations.",
         github: "https://github.com/aonontojahan",
+        sectionTitle: "Full-Stack Portfolio",
         projects: [
-            { name: "Smart Calculator", desc: "A smart calculator application providing advanced features with a clean UI.", link: "https://github.com/aonontojahan/Smart-Calculator", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] },
-            { name: "Real Time Chat App", desc: "A real-time chat application utilizing WebSockets for instant messaging.", link: "https://github.com/aonontojahan/realtime-chat-app", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] }
+            { name: "Smart Calculator", desc: "A sophisticated calculator with advanced functions and a modern, high-performance UI.", link: "https://github.com/aonontojahan/Smart-Calculator", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] },
+            { name: "Real-Time Chat App", desc: "A responsive instant messaging system utilizing WebSockets for zero-latency communication.", link: "https://github.com/aonontojahan/realtime-chat-app", tech: ["PostgreSQL", "FastAPI", "WebSockets", "JavaScript"] }
         ]
     },
     engineer: {
@@ -95,17 +96,19 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
         description: "Solving complex technical challenges with clean, efficient, and scalable code following SOLID principles.",
         github: "https://github.com/aonontojahan",
+        sectionTitle: "Engineering Focus",
         projects: [
-            { name: "Resale Marketplace for Electronics Devices", desc: "A robust electronic device marketplace platform with real-time features and secure backend.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets", "HTML", "CSS", "JavaScript"] }
+            { name: "Resale Electronics Marketplace", desc: "A robust platform for device trading featuring secure auth and real-time backend logic.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets"] }
         ]
     },
     manager: {
         title: "Project Manager",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
         description: "Leading cross-functional teams to deliver high-impact digital solutions using Agile methodologies.",
+        sectionTitle: "Management Experience",
         projects: [
-            { name: "Event Management System", desc: "I manage software projects from planning to delivery. Focused on team coordination, timelines, and quality outcomes. Bridging the gap between technical execution and business goals.", link: "https://github.com/aonontojahan/Event-Management-System", tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"] },
-            { name: "Resale Marketplace for Electronics", desc: "Managed the technical architecture and delivery of a real-time electronic marketplace, ensuring scalability and performance.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets", "HTML", "CSS", "JavaScript"] }
+            { name: "Event Management System", desc: "Strategic orchestration of project lifecycles, team coordination, and quality benchmarks.", link: "https://github.com/aonontojahan/Event-Management-System", tech: ["PHP", "MySQL", "Agile", "Team Lead"] },
+            { name: "Marketplace Delivery", desc: "Managed technical architecture and sprint cycles for a real-time electronic marketplace.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["Architecture", "Strategy", "Agile"] }
         ]
     },
     solver: {
@@ -113,9 +116,10 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
         description: "An analytical thinker who thrives on dissecting intricate technical challenges and competitive programming.",
         github: "https://github.com/aonontojahan",
+        sectionTitle: "Algorithmic Focus",
         projects: [
-            { name: "Competitive Programming Practice Hub", desc: "My approach and solution repository for learning and solving algorithmic challenges.", link: "https://github.com/aonontojahan/CP-Practice-Hub", tech: ["C++", "Python", "Algorithms", "Data Structures"] },
-            { name: "Learn Python", desc: "Educational repository focused on mastering Python concepts.", link: "https://github.com/aonontojahan/Learn-Python", tech: ["Python", "Scripting", "OOP"] }
+            { name: "Competitive Programming Hub", desc: "A curated repository of advanced algorithmic solutions and data structure implementations.", link: "https://github.com/aonontojahan/CP-Practice-Hub", tech: ["C++", "Python", "Algorithms", "Optimization"] },
+            { name: "Code Education", desc: "Educational repository focused on mastering Python concepts and OOP principles.", link: "https://github.com/aonontojahan/Learn-Python", tech: ["Python", "Scripting", "OOP"] }
         ]
     },
 
@@ -124,6 +128,7 @@ const portfolioData = {
         title: "BSc in Computer Science and Engineering",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
         description: "IUBAT - International University of Business Agriculture and Technology. CGPA: 3.49.",
+        sectionTitle: "Key Coursework & Thesis",
         projects: [
             { name: "Core Coursework", desc: "C, C++, Java, C#, Compiler Design, Networking, Software Engineering, System Design, Theory of Computation, Data Structures, DBMS, Computer Architecture, MIS, Programming Logic Structure.", tech: [] },
             { name: "Thesis", desc: "Fusion-based Brain Tumor classification using Efficient Net-v2 and Swin Transformer: A deep learning approach. Achieved 96.5% accuracy.", tech: ["Deep Learning", "EfficientNet-v2", "Swin Transformer", "Python"] }
@@ -133,6 +138,7 @@ const portfolioData = {
         title: "Higher Secondary Certificate (HSC)",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
         description: "Collectorate School and College, Rangpur in Science group. GPA: 5.00 (Session 2019).",
+        sectionTitle: "Academic Highlights",
         projects: [
             { name: "Science Track", desc: "Completed coursework focusing on Physics, Chemistry, Higher Mathematics, and Biology.", tech: [] }
         ]
@@ -141,6 +147,7 @@ const portfolioData = {
         title: "Secondary School Certificate (SSC)",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
         description: "Bhendabari M. L High School in Science group. GPA: 5.00 (Session 2017).",
+        sectionTitle: "Foundational Education",
         projects: [
             { name: "Science Track", desc: "Built foundational knowledge in general sciences and analytical problem solving.", tech: [] }
         ]
@@ -152,6 +159,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
         description: "Advanced calculator with clean UI.",
         github: "https://github.com/aonontojahan/Smart-Calculator",
+        sectionTitle: "",
         projects: [
             { name: "Smart Calculator", desc: "Built with a modern frontend and a scalable API backend.", link: "https://github.com/aonontojahan/Smart-Calculator", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] }
         ]
@@ -161,6 +169,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
         description: "Instant messaging application utilizing WebSockets.",
         github: "https://github.com/aonontojahan/realtime-chat-app",
+        sectionTitle: "",
         projects: [
             { name: "Chat Engine", desc: "Backend infrastructure for rapid message delivery using WebSockets.", link: "https://github.com/aonontojahan/realtime-chat-app", tech: ["PostgreSQL", "FastAPI", "HTML", "CSS", "JavaScript"] }
         ]
@@ -170,6 +179,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>`,
         description: "Electronic device marketplace platform using FastAPI and WebSockets.",
         github: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices",
+        sectionTitle: "",
         projects: [
             { name: "Marketplace Core", desc: "Developed the core backend with secure authentication and WebSocket based trading logic.", link: "https://github.com/aonontojahan/Resale-Marketplace-for-Electronics-Devices", tech: ["PostgreSQL", "FastAPI", "SQLAlchemy", "WebSockets", "HTML", "CSS", "JavaScript"] }
         ]
@@ -179,6 +189,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
         description: "System managing project lifecycles, team coordination, and business timelines.",
         github: "https://github.com/aonontojahan/Event-Management-System",
+        sectionTitle: "",
         projects: [
             { name: "System Orchestration", desc: "Bridging the gap between technical execution and business goals.", link: "https://github.com/aonontojahan/Event-Management-System", tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"] }
         ]
@@ -188,6 +199,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
         description: "A custom compiler written in Python capturing syntax trees and tokenization.",
         github: "https://github.com/aonontojahan/Young-Programmer-Compiler",
+        sectionTitle: "",
         projects: [
             { name: "Python Compiler", desc: "Applying Python Tokenization and Abstract Syntax Tree extraction.", link: "https://github.com/aonontojahan/Young-Programmer-Compiler", tech: ["Python", "Tokenization", "Syntax Tree"] }
         ]
@@ -197,6 +209,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
         description: "Full-stack backend integrating PostgreSQL, FastAPI, and an HTML API.",
         github: "https://github.com/aonontojahan/Bookshop-Management-System",
+        sectionTitle: "",
         projects: [
             { name: "Bookshop API", desc: "Basic CRUD operations and includes a basic HTML + Bootstrap frontend integrated with the backend.", link: "https://github.com/aonontojahan/Bookshop-Management-System", tech: ["Python", "PostgreSQL", "FastAPI", "HTML", "Bootstrap"] }
         ]
@@ -206,6 +219,7 @@ const portfolioData = {
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
         description: "Bash-orchestrated Linux system toolkit for health checks and log analysis.",
         github: "https://github.com/aonontojahan/Mini-System-Monitoring-Log-Analysis-Toolkit-MSLAT",
+        sectionTitle: "",
         projects: [
             { name: "MSLAT", desc: "Scripts orchestrating setup, health checks, log collection, process monitoring, and report generation via master script (run_all.sh).", link: "https://github.com/aonontojahan/Mini-System-Monitoring-Log-Analysis-Toolkit-MSLAT", tech: ["Ubuntu/Linux", "Bash shell", "Terminal access"] }
         ]
@@ -318,7 +332,7 @@ const portfolioData = {
         title: "Discovery Step",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
         description: "I dive deep into your vision to ensure every technical detail aligns with your business objectives.",
-        sectionTitle: "What I Do during Discovery",
+        sectionTitle: "Strategic Discovery Phase",
         projects: [
             { name: "Requirement Gathering", desc: "Detailed sessions to uncover every functional and non-functional need.", tech: ["Documentation", "Communication"] },
             { name: "Market Analysis", desc: "Understanding the landscape to build a competitive edge.", tech: ["Research"] },
@@ -329,7 +343,7 @@ const portfolioData = {
         title: "Planning Step",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
         description: "A solid blueprint is the foundation of any great project. I map out the most efficient path to success.",
-        sectionTitle: "What I Do during Planning",
+        sectionTitle: "Technical Architecture Planning",
         projects: [
             { name: "Tech Stack Selection", desc: "Choosing the perfect combination of modern tools for your project.", tech: ["Architecture"] },
             { name: "Database Schema Design", desc: "Designing resilient and scalable data structures.", tech: ["SQL", "NoSQL"] },
@@ -465,7 +479,12 @@ cards.forEach(card => {
             modalProjects.innerHTML = '';
             
             if (modalSectionTitle) {
-                modalSectionTitle.textContent = data.sectionTitle || 'Recent Work';
+                if (data.sectionTitle === "") {
+                    modalSectionTitle.style.display = 'none';
+                } else {
+                    modalSectionTitle.style.display = 'block';
+                    modalSectionTitle.textContent = data.sectionTitle || 'Recent Work';
+                }
             }
             
             if (data.contentHtml) {

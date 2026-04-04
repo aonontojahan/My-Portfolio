@@ -609,10 +609,19 @@ ul {
   border-top: 1px solid var(--bg-lighter);
 }
 
-.modal-section h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
+.modal-section h3,
+#modal-section-subtitle {
+  font-size: 13px;
+  margin: 0 auto 15px;
   color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--accent-glow);
+  padding: 6px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  width: fit-content;
+  display: block;
 }
 
 .project-item {
