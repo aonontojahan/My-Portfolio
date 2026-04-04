@@ -313,6 +313,85 @@ const portfolioData = {
         `
     },
 
+    // PROCESS SECTION
+    process_discovery: {
+        title: "Discovery Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+        description: "I dive deep into your vision to ensure every technical detail aligns with your business objectives.",
+        sectionTitle: "What I Do during Discovery",
+        projects: [
+            { name: "Requirement Gathering", desc: "Detailed sessions to uncover every functional and non-functional need.", tech: ["Documentation", "Communication"] },
+            { name: "Market Analysis", desc: "Understanding the landscape to build a competitive edge.", tech: ["Research"] },
+            { name: "Technical Feasibility", desc: "Evaluating potential challenges and ensuring a viable path forward.", tech: ["Consulting"] }
+        ]
+    },
+    process_planning: {
+        title: "Planning Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+        description: "A solid blueprint is the foundation of any great project. I map out the most efficient path to success.",
+        sectionTitle: "What I Do during Planning",
+        projects: [
+            { name: "Tech Stack Selection", desc: "Choosing the perfect combination of modern tools for your project.", tech: ["Architecture"] },
+            { name: "Database Schema Design", desc: "Designing resilient and scalable data structures.", tech: ["SQL", "NoSQL"] },
+            { name: "Project Roadmapping", desc: "Setting clear milestones and expectations for timeline and budget.", tech: ["Agile Planning"] }
+        ]
+    },
+    process_feedback: {
+        title: "Feedback & Review Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`,
+        description: "Building your trust is as important as building your software. Continuous feedback ensures complete alignment.",
+        sectionTitle: "How Feedback Works",
+        projects: [
+            { name: "Design Review", desc: "Validating the UI/UX flows and visual language with you.", tech: ["UI/UX Validation"] },
+            { name: "Architecture Validation", desc: "Ensuring the technical plan meets your long-term vision.", tech: ["Consulting"] },
+            { name: "Continuous Alignment", desc: "Regular touchpoints to ensure the project stays on track.", tech: ["Communication"] }
+        ]
+    },
+    process_development: {
+        title: "Development Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>`,
+        description: "Transforming ideas into high-performance reality with clean, scalable, and maintainable code.",
+        sectionTitle: "My Development Standards",
+        projects: [
+            { name: "Agile Sprints", desc: "Iterative development focusing on shipping functional features rapidly.", tech: ["Agile", "Scrum"] },
+            { name: "Clean Code Principles", desc: "Ensuring the codebase is maintainable and follows SOLID patterns.", tech: ["Quality Control"] },
+            { name: "Daily Progress Updates", desc: "Maintaining full transparency on what's being built.", tech: ["Transparency"] }
+        ]
+    },
+    process_testing: {
+        title: "Testing Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+        description: "Your users deserve perfection. I stress-test every feature to ensure a seamless experience.",
+        sectionTitle: "My Quality Assurance Process",
+        projects: [
+            { name: "Unit & Integration Testing", desc: "Automated checks to prevent regressions and bugs.", tech: ["Automation"] },
+            { name: "QA & Bug Squashing", desc: "Rigorous manual and automated passes for pure functionality.", tech: ["Reliability"] },
+            { name: "Performance Auditing", desc: "Optimizing speed and ensuring the app handles load gracefully.", tech: ["Optimization"] }
+        ]
+    },
+    process_deployment: {
+        title: "Deployment Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+        description: "Handling the entire launch process so your product starts strong and stays stable.",
+        sectionTitle: "What's in Deployment",
+        projects: [
+            { name: "CI/CD Implementation", desc: "Automating the path from code pushing to live deployment.", tech: ["CI/CD", "DevOps"] },
+            { name: "Security Hardening", desc: "Ensuring the production environment is resilient and safe.", tech: ["Security"] },
+            { name: "Production Launch", desc: "The final step to making your project live and accessible.", tech: ["Cloud Infrastructure"] }
+        ]
+    },
+    process_maintenance: {
+        title: "Maintenance Step",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>`,
+        description: "Long-term support to ensure your platform stays modern, secure, and ready to grow.",
+        sectionTitle: "Post-Launch Care",
+        projects: [
+            { name: "Ongoing Monitoring", desc: "Watching over server health and performance metrics.", tech: ["Health Checks"] },
+            { name: "Version Upgrades", desc: "Keeping dependencies fresh and protected against vulnerabilities.", tech: ["Security Fixes"] },
+            { name: "Performance Optimization", desc: "Continually refining speed and responsiveness as more users join.", tech: ["Refinement"] }
+        ]
+    },
+
     // SERVICES SECTION
     service_frontend: {
         title: "Frontend Development",
