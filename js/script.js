@@ -1,10 +1,20 @@
-// Navbar Scroll Effect
+// Navbar Scroll Effect + Hide scroll arrow after hero
 const navbar = document.getElementById('navbar');
+const scrollIndicator = document.querySelector('.scroll-indicator');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+    // Hide the down arrow once user scrolls past the hero section
+    const heroHeight = document.getElementById('hero')?.offsetHeight || window.innerHeight;
+    if (scrollIndicator) {
+        if (window.scrollY > heroHeight * 0.4) {
+            scrollIndicator.classList.add('hidden');
+        } else {
+            scrollIndicator.classList.remove('hidden');
+        }
     }
 });
 
