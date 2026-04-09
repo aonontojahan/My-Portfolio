@@ -464,6 +464,18 @@ const portfolioData = {
             { name: "Performance Optimization", desc: "Auditing bottlenecks and drastically improving speed.", tech: ["Profiling", "Caching"] },
             { name: "Tech Stack Selection", desc: "Advising on the ideal modern tools for your business objective.", tech: ["Consulting", "Strategy"] }
         ]
+    },
+    service_socialmedia: {
+        title: "Social Media Creation & Management",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="12" cy="10" r="3"/><path d="M16 10v-2a4 4 0 0 0-4-4"/></svg>`,
+        description: "Creating and managing engaging social media content, building brand presence, and growing audience across platforms to help businesses connect with their target audience.",
+        sectionTitle: "What I Provides",
+        projects: [
+            { name: "Content Strategy", desc: "Developing tailored content plans that align with your brand voice and business goals.", tech: ["Strategy", "Planning", "Brand Voice"] },
+            { name: "Visual Content Creation", desc: "Designing eye-catching graphics, posts, and multimedia content for maximum engagement.", tech: ["Canva", "Adobe Creative", "Visual Design"] },
+            { name: "Account Management", desc: "Day-to-day management of social media accounts including scheduling and community engagement.", tech: ["Meta Business", "Scheduling Tools", "Analytics"] },
+            { name: "Growth & Analytics", desc: "Tracking performance metrics and implementing strategies to grow followers and engagement.", tech: ["Insights", "SEO", "Trend Analysis"] }
+        ]
     }
 };
 
