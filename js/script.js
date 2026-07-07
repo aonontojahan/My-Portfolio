@@ -137,7 +137,7 @@ const portfolioData = {
     education: {
         title: "BSc in Computer Science and Engineering",
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
-        description: "IUBAT - International University of Business Agriculture and Technology. CGPA: 3.49.",
+        description: "IUBAT - International University of Business Agriculture and Technology. CGPA: 3.47.",
         sectionTitle: "Key Coursework & Thesis",
         projects: [
             { name: "Core Coursework", desc: "C, C++, Java, C#, Compiler Design, Networking, Software Engineering, System Design, Theory of Computation, Data Structures, DBMS, Computer Architecture, MIS, Programming Logic Structure.", tech: [] },
